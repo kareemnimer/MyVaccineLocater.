@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <div class="row bg-white">
+    <div class="col-12">
+      <nav class="navbar navbar-expand-lg navbar-light nav-edit">
+        <a><img class="w-75" src="/assets/img/logo.jpg" alt="image"></a>
+        <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mr-auto">
+           <li class="nav-item pl-1 "><a class="nav-link text-dark " [routerLink]="'.'" (click)="isMenuCollapsed = true">Home
+              <span class="sr-only">(current)</span></a></li>
+
+              <li class="nav-item  pl-1">
+                <a class="nav-link text-dark"routerLink="/SearchForSpecVacComponent" routerLinkActive="active" (click)="isMenuCollapsed = true">Find Vaccines</a>
+              </li>
+
+            <li class="nav-item  pl-1">
+              <a class="nav-link text-dark" routerLink="/faq" routerLinkActive="active"
+                (click)="isMenuCollapsed = true">FAQ</a>
+            </li>
+            <li class="nav-item  pl-1">
+              <a class="nav-link text-dark" routerLink="/book-appoinatment" routerLinkActive="active"
+                (click)="isMenuCollapsed = true">Book Appointment</a>
+            </li>
+            <li class="nav-item  pl-1">
+              <a class="nav-link text-dark " routerLink="/VaccineCentersComponent" routerLinkActive="active"
+                (click)="isMenuCollapsed = true">Vaccine Centers</a>
+            </li>
+            <li class="nav-item  pl-1">
+              <a class="nav-link text-dark " routerLink="/AddAlertComponent" routerLinkActive="active"
+                (click)="isMenuCollapsed = true">Add Alert</a>
+            </li>
+            <li class="nav-item  pl-1">
+              <a class="nav-link text-secondary disabled" routerLink="/" routerLinkActive="active"
+                (click)="isMenuCollapsed = true">Admin</a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+      <br>
+    </div>
+  </div>
+</div>
+  <!--header end-->
+  
+  <div class="row bg-primary-edit mx-0">
+    <div class="col-12 ">
+      <h2 class="text-center text-white">My Vaccine Locater</h2>
+    </div>
+  </div>
+  <hr>
+
+
+  <div class="container">
+<!--router-outlet here-->
+  <router-outlet></router-outlet>
+  </div><br><br>
+
+<footer class="text-center bg-primary-edit  text-white position">Copyright © 2021. All Rights Reserved</footer>

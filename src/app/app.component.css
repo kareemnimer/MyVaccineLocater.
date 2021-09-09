@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(239, 239, 239);
+    
+}
+.container{
+    font-family:cursive;
+    
+}
+.navbar{
+    flex-wrap: nowrap;
+}
+.nav-edit{
+    margin-bottom: -2rem !important;
+}
+a:hover{
+    color: #1d90a9 !important;
+    font-size: 20px !important;
+}
+.bg-primary-edit{
+    background-color: #1d90a9;
+    padding: 0;
+    }
+.position{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center
+    }
+
+
+   
+
+
+
+
+
+
+
+

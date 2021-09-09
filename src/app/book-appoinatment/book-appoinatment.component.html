@@ -1,0 +1,78 @@
+<br>
+<form>
+  <div class="row">
+    <div class="form-group col-md-12">
+      <label>Center Name</label>
+      <select class="form-control">
+        <option *ngFor="let card of cards" required>{{card.CenterName}}</option>
+        
+      </select>
+    </div>
+  </div>
+    
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputFirstName">First Name:</label>
+      <input type="text" class="form-control" id="inputFirstName" placeholder="first Name" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputLastName">Last Name:</label>
+      <input type="text" class="form-control" id="inputLastName" placeholder="Family Name" required>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputPhoneNumber">Phone Number:</label>
+      <input type="number" class="form-control" id="inputPhoneNumber" placeholder="962+" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputAge">Age:</label>
+      <input type="number" class="form-control" id="inputAge" required>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="form-group col-md-6">
+      <label for="inputRequriedVaccine">Requried Vaccine:</label>
+      <select id="inputRequriedVaccine" class="form-control">
+        <option>Pfizer</option>
+        <option>AstraZeneca</option>
+        <option>Sinopharm</option>
+        <option>Johnson</option>
+        <option>Moderna</option>
+      </select>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputRequriedDose">Requried Dose:</label>
+      <select id="inputRequriedDose" class="form-control">
+        <option>First Dose</option>
+        <option>Second Dose</option>
+      </select>
+    </div>
+  </div><br>
+  <div>
+
+    <form class="form-inline">
+      <div class="form-group">
+        <div class="input-group">
+          <label for="inputDate">Date:</label>
+          <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker
+            #d="ngbDatepicker">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar"
+                viewBox="0 0 16 16">
+                <path
+                  d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+              </svg></button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="text-center mt-3"> <button type="submit" class="btn btn-primary w-25">Book</button></div>
+
+</form>
+
+<br>

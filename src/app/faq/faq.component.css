@@ -1,0 +1,36 @@
+
+
+
+
+
+
+
+@media (max-width: 576px) { 
+
+    .width-edit-img-sm{
+        width: 100% !important;
+        
+    }
+    .width-edit-img-sm-two{
+        width: 100% !important;
+        
+    }
+    .font-edit-link-sm{
+        font-size: 13px !important;
+    }
+    
+   
+}
+@media (min-width: 768px) { 
+   
+ }
+
+
+@media (min-width: 992px) { 
+   
+ }
+
+
+@media (min-width: 1200px) { 
+
+}

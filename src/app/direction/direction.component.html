@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-12">
+      
+  <google-map
+  height="500px"
+  width="100%"
+  [zoom]="zoom"
+  [center]="center"
+  [options]="options"
+>
+<map-marker
+    #markerElem
+    *ngFor="let marker of markers"
+    [position]="marker.position"
+    [label]="marker.label"
+    [title]="marker.title"
+    [options]="marker.options">
+  </map-marker>
+
+
+</google-map>
+
+<button (click)="zoomIn()">Zoom in</button>
+<button (click)="zoomOut()">Zoom out</button>
+
+
+    </div>
+  </div>
+</div>

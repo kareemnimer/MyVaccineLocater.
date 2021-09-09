@@ -1,0 +1,39 @@
+<form>
+    <div class="row">
+      <div class="form-group col-md-12">
+        <label>Choose a Center Name</label>
+        <select class="form-control" [(ngModel)]="selectedCenter" (change)="onChange($event)" id="cards" name="cards" required>
+         
+          <option *ngFor="let card of cardNames"required> {{card.CenterName}}</option>
+          
+        </select>
+      </div>
+    </div>
+</form>
+
+
+<div class="row row-edit-sm">
+    <div class="col-md-6 col-lg-4 col-sm-12" *ngFor="let card of cards">
+      <div class="card shadow p-3 mb-5 bg-white rounded text-center">
+        <div class="card-body-edit">
+            <h5 class="card-title">Available Vaccines:<p class="text-secondary">{{card.AvailableVaccines}}</p>
+            </h5>
+          <h5 class="card-title">Location:<p class="text-secondary">{{card.Location}}</p>
+          </h5>
+          
+          <h5 class="card-title">Require Appointment:<p class="text-secondary">{{card.RequireAppointment}}</p>
+          </h5>
+          <h5 class="card-title">Dose Available:<p class="text-secondary">{{card.DoseAvailable}}</p>
+          </h5>
+          <br>
+          <a routerLink="/DirectionComponent" [queryParams]="{CenterId: card.CenterId , Location :card.Location,CenterName:card.CenterName}" routerLinkActive="active"><button class="btn btn-primary text-white rounded-pill ml-1" >Directions</button></a>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+    
+    
+  

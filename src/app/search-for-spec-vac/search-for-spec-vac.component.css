@@ -1,0 +1,143 @@
+.text-info-edit{
+    color: #063bcc;
+    font-size: 16px !important;
+}
+.text-info-edit-time{
+color: crimson;
+}
+label{
+    font-size: 18x;
+}
+.form-check-input-edit{
+ 
+    margin-left: -1rem;
+    width: 13px;
+    height: 13px;
+}
+    .bg-primary-edit{
+    background-color: #1d90a9;
+    padding: 0;
+    }
+    .btn-primary{
+    background-color: #1d90a9;
+    border-color: #1d90a9;
+    }
+    .form-inline-edit-sm{
+        flex-flow:nowrap !important;
+          display: flex;
+          align-items: center;
+    }
+    .form-control{
+        height: calc(1.5em + .81rem + 2px);
+        border-color: #1d90a9 !important;
+    }
+    .form-control::placeholder{
+        color: #1d90a9 !important;
+        text-align: center !important;
+    }
+    .form-control-search-edit{
+        width: 75% !important;
+        display:inline-block !important;
+    }
+    
+    
+
+
+@media (max-width: 576px) {
+    
+    .row-edit-sm{
+        margin-left: 0px!important;
+        margin-right: 0px!important;
+    }
+    .btn-outline-primary{
+        background-color:#1d90a9 ;
+        color: #fff;
+    }
+    .form-inline-edit-sm{
+      flex-flow:nowrap !important;
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    .text-edit-sm{
+     text-align: center !important;
+    }
+    .btn{
+        font-size: 12px;
+        border-color:#1d90a9 ;
+    }
+    .display-none-sm{
+        display: none;
+    }
+    .form-control-search-edit{
+        width: 100% !important;
+    }
+    .card-d-edit-sm{
+        display: block !important;
+    }
+    
+ }
+
+
+@media (min-width: 768px) {  
+    .card{
+        width: 22rem !important;
+    }
+    .form-inline-edit-sm{
+        flex-wrap: nowrap !important;
+        margin-top: 1rem;
+
+    }
+    .form-control-search-edit{
+        width: 100% !important;
+        display:inline-block !important;
+    }
+    .display-none-sm{
+        display: none;
+    }
+   
+  
+}
+
+
+@media (min-width: 992px) { 
+    .card{
+        width: 18rem !important;
+    }
+    .btn{
+        font-size: 13px;
+    }
+    .form-inline-edit-sm{
+        margin-top: 1rem;
+
+    }
+    .form-control-search-edit{
+        width: 90% !important;
+        display:inline-block !important;
+    }
+    .display-none-sm{
+        display:inline-block;
+    }
+    
+ }
+
+
+@media (min-width: 1200px) { 
+    .card{
+        width: 28rem !important;
+    }
+   
+    .btn{
+        font-size: 16px;
+    }
+    .btn-edit{
+        font-size: 14px;
+    }
+    .form-control-search-edit{
+        width: 75% !important;
+        display:inline-block !important;
+    }
+    .display-none-sm{
+        display:inline-block;
+    }
+ }
