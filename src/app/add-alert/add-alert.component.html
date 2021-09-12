@@ -3,13 +3,13 @@
 <form>
     <div class="row">
         <div class="form-group col-md-12">
-          <label>Center Name</label>
-          <select class="form-control">
-            <option *ngFor="let card of cards" required>{{card.CenterName}}</option>
-            
-          </select>
+            <label>Center Name</label>
+            <select class="form-control">
+                <option *ngFor="let card of cards" required>{{card.CenterName}}</option>
+
+            </select>
         </div>
-      </div>
+    </div>
 
 
 
@@ -34,7 +34,7 @@
                     (focus)="myDrop.open()">AvailableVaccines</button>
                 <div ngbDropdownMenu aria-labelledby="dropdownManual">
 
-                    <div class="form-check" >
+                    <div class="form-check">
                         <input type="checkbox" class="form-check-input form-check-input-edit " id="dropdownCheck">
                         <label class="form-check-label" for="dropdownCheck">
                             Pfizer
@@ -66,7 +66,8 @@
 
         <div class="col-6 text-center">
             <div class="" ngbDropdown #myDropp="ngbDropdown">
-                <button class="btn btn-outline-primary" id="dropdownManualtwo" ngbDropdownAnchor (focus)="myDropp.open()">AvailableDose</button>
+                <button class="btn btn-outline-primary" id="dropdownManualtwo" ngbDropdownAnchor
+                    (focus)="myDropp.open()">AvailableDose</button>
                 <div ngbDropdownMenu aria-labelledby="dropdownManualtwo">
                     <div class="form-check">
 
@@ -86,24 +87,30 @@
     <br>
 
     <div class="col-12">
-    <form class="form-inline justify-content-center">
-        <div class="form-group">
-            <div class="input-group">
-                <label for="inputDate">Date:</label>
-                <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker
-                    #d="ngbDatepicker">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-calendar" viewBox="0 0 16 16">
-                            <path
-                                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-                        </svg></button>
+        <form class="form-inline justify-content-center">
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="inputDate">Date:</label>
+                    <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker
+                        #d="ngbDatepicker">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-calendar" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                            </svg></button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
     </div>
-<br><br>
-    <div class="text-center"> <button type="submit" class="btn btn-primary w-50">Send Me Alert</button></div>
     <br>
+    <br>
+    <a routerLink="/"><div class="text-center"> <button type="submit" class="btn btn-primary w-50">Send Me Alert</button></div></a>
+    <br>
+
+
+
+
+    

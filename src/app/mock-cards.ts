@@ -21,7 +21,7 @@ import { cards} from './card';
       Location: 'Amman',
       cenLocationlatitude: 32.0075389,
       cenLocationlongitude:35.874712,
-      AvailableVaccines: ["pfizer","AstraZeneca"],
+      AvailableVaccines: ["pfizer"],
       DoseAvailable:['First dose'],
       WorkingTime:"9AM - 5PM",
       RequireAppointment:"NO"
@@ -32,7 +32,7 @@ import { cards} from './card';
       Location: 'Amman',
       cenLocationlatitude:31.9380538,
       cenLocationlongitude:35.9407674,
-      AvailableVaccines: ["pfizer","AstraZeneca"],
+      AvailableVaccines: ["AstraZeneca"],
       DoseAvailable:['First dose'],
       WorkingTime:"9AM - 5PM",
       RequireAppointment:"NO"
@@ -43,18 +43,18 @@ import { cards} from './card';
       Location: 'Amman',
       cenLocationlatitude:32.0217297,
       cenLocationlongitude:35.8870228,
-      AvailableVaccines: ["pfizer","AstraZeneca"],
+      AvailableVaccines: ["moderna"],
       DoseAvailable:['First dose','Second dose'],
       WorkingTime:"9AM - 5PM",
       RequireAppointment:"NO"
     },
     {
       CenterId:5,
-      CenterName: 'Al Hussein Medical City',
+      CenterName: 'king hussein medical center',
       Location: 'Amman',
       cenLocationlatitude: 31.9792442,
       cenLocationlongitude:35.8311259,
-      AvailableVaccines: ["pfizer","AstraZeneca"],
+      AvailableVaccines: ["pfizer"],
       DoseAvailable:['First dose'],
       WorkingTime:"9AM - 5PM",
       RequireAppointment:"NO"
@@ -87,7 +87,7 @@ import { cards} from './card';
       Location: 'Zarqa',
       cenLocationlatitude: 32.0672086,
       cenLocationlongitude:36.0974038,
-      AvailableVaccines: ["pfizer","AstraZeneca"],
+      AvailableVaccines: ["pfizer"],
       DoseAvailable:['Second dose'],
       WorkingTime:"9AM - 5PM",
       RequireAppointment:"NO"
@@ -98,7 +98,7 @@ import { cards} from './card';
       Location: 'Zarqa',
       cenLocationlatitude: 32.0586388,
       cenLocationlongitude:36.0857707,
-      AvailableVaccines: ["pfizer","Sinopharm"],
+      AvailableVaccines: ["Sinopharm"],
       DoseAvailable:['First dose'],
       WorkingTime:"9AM - 5PM",
       RequireAppointment:"NO"

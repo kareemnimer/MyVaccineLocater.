@@ -57,8 +57,8 @@ export class MapforallcenterComponent implements OnInit {
     },
     {
     position: new google.maps.LatLng(31.979302,35.828937),
-    label: { color: 'blue',text: "Al Hussein Medical City"},
-      title: 'Al Hussein Medical City' ,info: 'Marker info ',
+    label: { color: 'blue',text: "king hussein medical center"},
+      title: 'king hussein medical center' ,info: 'Marker info ',
       options: {
       animation: google.maps.Animation.BOUNCE,
     },

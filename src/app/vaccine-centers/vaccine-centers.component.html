@@ -3,9 +3,7 @@
       <div class="form-group col-md-12">
         <label>Choose a Center Name</label>
         <select class="form-control" [(ngModel)]="selectedCenter" (change)="onChange($event)" id="cards" name="cards" required>
-         
           <option *ngFor="let card of cardNames"required> {{card.CenterName}}</option>
-          
         </select>
       </div>
     </div>

@@ -1,8 +1,6 @@
-
-import {Component, OnInit, ViewChild} from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { GoogleMap, MapInfoWindow, MapMarker } from '@angular/google-maps';
 import { ActivatedRoute } from '@angular/router';
-import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
 import { card } from '../mock-cards';
 
 
@@ -15,11 +13,11 @@ import { card } from '../mock-cards';
 })
 export class DirectionComponent implements OnInit {
   @ViewChild(GoogleMap, { static: false }) map!: GoogleMap;
-  @ViewChild(MapInfoWindow, { static: false }) info!: MapInfoWindow;
+  @ViewChild(MapInfoWindow, { static: false }) info!: MapInfoWindow
+
+  infoContent : any;
   CenterName!: string;
-  infoContent:any;
-  
-  markers : any = [];
+  markers: any = [];
   zoom = 17;
   center!: google.maps.LatLngLiteral;
   options: google.maps.MapOptions = {
@@ -29,20 +27,20 @@ export class DirectionComponent implements OnInit {
     disableDoubleClickZoom: true,
     maxZoom: 20,
     minZoom: 8,
-    
-    
+  
   }
   
-  constructor(private route:ActivatedRoute) {
-    
-  }
-  ngOnInit() {    
-    var centerId = Number(this.route.snapshot.queryParams['CenterId']);
 
-    var center = card.filter((element, index)=> {
+
+  constructor(private route: ActivatedRoute) { }
+  ngOnInit() {
+    var centerId = Number(this.route.snapshot.queryParams['CenterId']);
+    var center = card.filter((element, index) => {
       return element.CenterId == centerId;
     })[0];
-    console.log(center);
+    
+   
+    this.infoContent = [center.cenLocationlatitude,center.cenLocationlongitude]; 
     
     navigator.geolocation.getCurrentPosition((position) => {
       this.center = {
@@ -51,50 +49,35 @@ export class DirectionComponent implements OnInit {
       }
     });
 
-    //add users location marker 
-
-    // this.markers.push({
-    //   position: {
-    //     lat:this.center.lat ,
-    //     lng: this.center.lng
-    //   },
-      
-     
-    //   label: {
-    //     color: 'red',
-    //     text: "Distance Location",
-    //   },
-    //   title:"",
-    //   info: 'Marker info ',
-    //   options: {
-    //     animation: google.maps.Animation.BOUNCE,
-    //   },
-    // });
     this.markers.push({
       position: {
-        lat:center.cenLocationlatitude,
-        lng:center.cenLocationlongitude,
-      }, 
+        lat: center.cenLocationlatitude,
+        lng: center.cenLocationlongitude,
+      },
       label: {
         color: 'red',
         text: " ",
       },
-      title:" ",
+      title: " ",
       info: ' ',
       options: {
         animation: google.maps.Animation.BOUNCE,
       },
     });
   }
-  
+  openInfo(marker: MapMarker, content: any) {
+    this.info.open(marker)
+  }
+
+
   zoomIn() {
-    if ( this.options.maxZoom) this.zoom++
+    if (this.options.maxZoom) this.zoom++
   }
 
   zoomOut() {
-    if ( this.options.minZoom) this.zoom--
+    if (this.options.minZoom) this.zoom--
   }
-  
+
 }
 
 
